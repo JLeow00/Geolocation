@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Geolocation</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>Geolocation</h1>
+	<p>Click the button below to get your coordinates</p>
+	<button class="button" id="geolocButton">Click me</button>
+	<p id="latitude"></p>
+	<p id="longitude"></p>
+	<iframe
+		id="gmaps"
+		width="600"
+		height="450"
+		frameborder="0" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM-OQH5nB6-x2KHGhabtCEe5kg6JgK5Qc
+		&amp;q=Space+Needle,Seattle+WA" allowfullscreen>
+	</iframe>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
