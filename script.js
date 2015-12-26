@@ -1,5 +1,7 @@
 var lat = $("#latitude");
 var lon = $("#longitude");
+var Latitude;
+var Longitude;
 $(document).ready(function() {
 	$("#geolocButton").click(function() {
 		getLocation();
@@ -16,10 +18,11 @@ function getLocation() {
 
 
 function showPosition(position) {
-    lat.text("Latitude: " + position.coords.latitude);
-    lon.text("Longitude: " + position.coords.longitude);
+    Latitude = position.coords.latitude;
+    Longitude = position.coords.longitude;
+    lat.text("Latitude: " + Latitude);
+    lon.text("Longitude: " + Longitude);
     var src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDM-OQH5nB6-x2KHGhabtCEe5kg6JgK5Qc&q=" +
-    position.coords.latitude + "," +
-    position.coords.longitude;
+    Latitude + "," + Longitude;
     $("#gmaps").attr("src", src);
 }
