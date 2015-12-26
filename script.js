@@ -21,6 +21,5 @@ function showPosition(position) {
     var src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDM-OQH5nB6-x2KHGhabtCEe5kg6JgK5Qc&q=" +
     position.coords.latitude + "," +
     position.coords.longitude;
-    alert(src);
     $("#gmaps").attr("src", src);
 }
